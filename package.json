@@ -1,6 +1,6 @@
 {
   "name": "my-app",
-  "homepage": "https://hmurikinati.github.io/react-course-expensify-app-hmurikinati",
+  "homepage": ".",
   "jest": {
     "snapshotSerializers": [
       "enzyme-to-json/serializer"
