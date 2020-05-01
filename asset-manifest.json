@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/react-course-expensify-app-hmurikinati/static/css/main.cd79ba44.chunk.css",
+    "main.js": "/react-course-expensify-app-hmurikinati/static/js/main.56d3bc31.chunk.js",
+    "main.js.map": "/react-course-expensify-app-hmurikinati/static/js/main.56d3bc31.chunk.js.map",
+    "runtime-main.js": "/react-course-expensify-app-hmurikinati/static/js/runtime-main.7f2a0a6a.js",
+    "runtime-main.js.map": "/react-course-expensify-app-hmurikinati/static/js/runtime-main.7f2a0a6a.js.map",
+    "static/css/2.764ccc25.chunk.css": "/react-course-expensify-app-hmurikinati/static/css/2.764ccc25.chunk.css",
+    "static/js/2.2b584f70.chunk.js": "/react-course-expensify-app-hmurikinati/static/js/2.2b584f70.chunk.js",
+    "static/js/2.2b584f70.chunk.js.map": "/react-course-expensify-app-hmurikinati/static/js/2.2b584f70.chunk.js.map",
+    "index.html": "/react-course-expensify-app-hmurikinati/index.html",
+    "precache-manifest.f432fab3b3a35a75fe48d9cf57d1e395.js": "/react-course-expensify-app-hmurikinati/precache-manifest.f432fab3b3a35a75fe48d9cf57d1e395.js",
+    "service-worker.js": "/react-course-expensify-app-hmurikinati/service-worker.js",
+    "static/css/2.764ccc25.chunk.css.map": "/react-course-expensify-app-hmurikinati/static/css/2.764ccc25.chunk.css.map",
+    "static/css/main.cd79ba44.chunk.css.map": "/react-course-expensify-app-hmurikinati/static/css/main.cd79ba44.chunk.css.map",
+    "static/js/2.2b584f70.chunk.js.LICENSE.txt": "/react-course-expensify-app-hmurikinati/static/js/2.2b584f70.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7f2a0a6a.js",
+    "static/css/2.764ccc25.chunk.css",
+    "static/js/2.2b584f70.chunk.js",
+    "static/css/main.cd79ba44.chunk.css",
+    "static/js/main.56d3bc31.chunk.js"
+  ]
+}
