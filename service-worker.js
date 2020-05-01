@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/react-course-expensify-app-hmurikinati/precache-manifest.f432fab3b3a35a75fe48d9cf57d1e395.js"
+  "/react-course-expensify-app-hmurikinati/precache-manifest.84822eca937c874e23d6f1f4b4dd7c52.js"
 );
 
 self.addEventListener('message', (event) => {
