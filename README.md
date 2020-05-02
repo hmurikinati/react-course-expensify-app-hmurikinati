@@ -227,3 +227,15 @@ _________________________________________
 18. git remote -v
 19. git push -u origin master
 20 : good example to frontend and backend with express : https://www.youtube.com/watch?v=kJA9rDX7azM
+21. check heroku version heroku --version
+22. Open git bash
+23. enter heroku login
+24. Open git bash
+25. enter heroku create appname
+26. git remote
+27. git remote -v
+28. Great article to deploy code https://medium.com/@ianposton2/create-react-app-deploy-to-heroku-7c3c03f34382
+29. open git bash root folder
+30. touch Procfile
+
+
