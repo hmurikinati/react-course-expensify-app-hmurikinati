@@ -13,9 +13,6 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
-    "enzyme": "^3.11.0",
-    "enzyme-adapter-react-16": "^1.15.2",
-    "enzyme-to-json": "^3.4.4",
     "express": "^4.17.1",
     "gh-pages": "^2.2.0",
     "husky": "^4.2.5",
@@ -23,6 +20,7 @@
     "moment": "^2.24.0",
     "node-sass": "^4.13.1",
     "normalize.css": "^8.0.1",
+    "numeral": "^2.0.6",
     "prettier": "^2.0.4",
     "raf": "^3.4.1",
     "react": "^16.13.1",
@@ -33,7 +31,6 @@
     "react-redux": "^7.2.0",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.4.1",
-    "react-test-renderer": "^16.13.1",
     "react-uuid": "^1.0.2",
     "redux": "^4.0.5",
     "uuid": "^7.0.3"
@@ -71,6 +68,10 @@
     ]
   },
   "devDependencies": {
-    "redux-devtools": "^3.5.0"
+    "redux-devtools": "^3.5.0",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
+    "enzyme-to-json": "^3.4.4",
+    "react-test-renderer": "^16.13.1"
   }
 }

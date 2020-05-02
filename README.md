@@ -238,4 +238,4 @@ _________________________________________
 29. open git bash root folder
 30. touch Procfile
 31. git push heroku master
-
+32. yarn add --production to install production dependencies
