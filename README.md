@@ -237,5 +237,5 @@ _________________________________________
 28. Great article to deploy code https://medium.com/@ianposton2/create-react-app-deploy-to-heroku-7c3c03f34382
 29. open git bash root folder
 30. touch Procfile
-
+31. git push heroku master
 
