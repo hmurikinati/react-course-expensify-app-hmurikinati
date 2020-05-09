@@ -7,15 +7,15 @@ export const addExpense = (expense) => ({
 });
 
 export const startAddingExpense = (expenseData = {}) => {
-    
+    console.log('expenseData :', expenseData);
     return (dispatch) =>{
         const {
             description = '',
-            note = '',
+            notes = '',
             amount = 0,
             createdAt = 0
         } = expenseData;
-        const expense = {description, note, amount, createdAt};
+        const expense = {description, notes, amount, createdAt};
         return database.ref('expenses').push(expense)
         .then((ref) => {
             dispatch(addExpense({

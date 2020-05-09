@@ -25,25 +25,12 @@ test('Should expect edit expense action object', () => {
     });
 })
 
-// test('Add expense action default values', () => {
-//     const action = addExpense();
-//     expect(action).toEqual({
-//         type: 'ADD_EXPENSE',
-//         expense: {
-//             id: expect.any(String),
-//             description: '',
-//             note: '',
-//             amount: 0,
-//             createdAt: 0
-//         }
-//     })
-// })
 
 
 test('should setup add expense action with provided value', () => {
     const expenseData = {
         description: 'Hi',
-        note: 'Bye',
+        notes: 'Bye',
         amount: 1000,
         createdAt: 2000
     }
@@ -58,7 +45,7 @@ test('should setup add expense action with provided value', () => {
 test("Shoud add expense to database and store", (done) => {
     const expenseData = {
         description: 'Mouse',
-        note: 'This mouse is good',
+        notes: 'This mouse is good',
         amount: 1000,
         createdAt: 2000
     }
@@ -93,7 +80,7 @@ test("Shoud add expense with defaults to database and store", (done) => {
         expect(actions[0].expense).toEqual({
             id: expect.any(String),
             description: '',
-            note: '',
+            notes: '',
             amount: 0,
             createdAt: 0
         })
@@ -102,7 +89,7 @@ test("Shoud add expense with defaults to database and store", (done) => {
         .then((snapshot) => {
             expect(snapshot.val()).toEqual({
                 description: '',
-                note: '',
+                notes: '',
                 amount: 0,
                 createdAt: 0 
             });
