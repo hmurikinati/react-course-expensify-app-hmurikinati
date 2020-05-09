@@ -239,3 +239,4 @@ _________________________________________
 30. touch Procfile
 31. git push heroku master
 32. yarn add --production to install production dependencies
+33. Firebase auth in 5 min https://medium.com/firebase-developers/how-to-setup-firebase-authentication-with-react-in-5-minutes-maybe-10-bb8bb53e8834
