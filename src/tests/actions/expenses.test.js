@@ -1,6 +1,6 @@
 import configureMockStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
-import { startAddingExpense, removeExpense, editExpense, addExpense, setExpenses, startSetExpenses } from '../../actions/expenses';
+import { startAddingExpense, removeExpense, editExpense, addExpense, setExpenses, startSetExpenses, startRemoveExpense, startUpdateExpense } from '../../actions/expenses';
 import database from '../../firebase/firebase';
 import expenses from '../fixtures/expenses';
 import expensesReducer from '../../reducers/expenses'
@@ -116,25 +116,68 @@ test("Should setup set expense action object with data", () => {
 });
 
 test("Should set expenses", () => {
-    
-    const action =  {
+
+    const action = {
         type: 'SET_EXPENSES',
-    expenses : [expenses[1]]
+        expenses: [expenses[1]]
     }
     const state = expensesReducer(expenses, action)
     expect(state).toEqual([expenses[1]]);
-   
+
 });
 
 test('Should fetch expenses from firebase', (done) => {
     const store = createMockStore({});
     store.dispatch(startSetExpenses()).then((response) => {
-        //console.log('response : ', );
+        
         const action = store.getActions()
         expect(action[0]).toEqual({
             type: 'SET_EXPENSES',
             expenses
         })
         done();
-    }) 
+    })
+})
+
+test('Should update expense', (done) => {
+
+    const id = expenses[1].id;
+    const updates = {  amount: 10500 };
+    const store = createMockStore({});
+    store.dispatch(startUpdateExpense({ id }, updates)).then(() => {
+
+        const actions = store.getActions();
+        expect(actions[0]).toEqual({
+            type: "EDIT_EXPENSE",
+            id,
+            updates
+        })
+       
+        return database.ref(`expenses/${id}`).once('value')
+    })
+    .then((snapshot) => {
+       
+        expect(snapshot.val().amount).toBe(updates.amount);
+        done();
+    });
+
+});
+
+test("Should delete expense", (done) => {
+    const id = expenses[0].id;
+
+    const store = createMockStore({});
+    store.dispatch(startRemoveExpense({ id })).then(() => {
+
+        const actions = store.getActions();
+        expect(actions[0]).toEqual({
+            type: 'REMOVE_EXPENSE',
+            id
+        })
+        return database.ref(`expepnses/${id}`).once('value')
+    })
+        .then((snapshot) => {
+            expect(snapshot.val()).toBeFalsy();
+            done();
+        })
 })

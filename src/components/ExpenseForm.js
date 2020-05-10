@@ -5,7 +5,7 @@ import { SingleDatePicker } from 'react-dates';
 
 import 'react-dates/lib/css/_datepicker.css';
 const now = moment();
-console.log(now.format('MMM Do, YYYY'))
+
 
 export default class ExpenseForm extends React.Component {
 
@@ -13,10 +13,10 @@ export default class ExpenseForm extends React.Component {
 
         super(props);
         this.state = {
-            description: props.expense ? props.expense.description : '',
-            note: props.expense ? props.expense.note : '',
-            amount: props.expense ? (props.expense.amount / 100).toString() : '',
-            createdAt: props.expense ? moment(props.expense.createdAt) : moment(),
+            description: (props.expense && props.expense.description) ? props.expense.description : '',
+            notes: (props.expense  && props.expense.notes) ? props.expense.notes : '',
+            amount: (props.expense  && props.expense.amount) ? (props.expense.amount / 100).toString() : '',
+            createdAt: ( props.expense && props.expense.createdAt )? moment(props.expense.createdAt) : moment(),
             calendarFocused: false,
             error: ''
         }
@@ -31,8 +31,8 @@ export default class ExpenseForm extends React.Component {
     }
 
     noteOnChange = (e) => {
-        const note = e.target.value;
-        this.setState(() => ({ note }));
+        const notes = e.target.value;
+        this.setState(() => ({ notes }));
     }
     onAmountChange = (e) => {
         const amount = e.target.value;
@@ -42,7 +42,7 @@ export default class ExpenseForm extends React.Component {
         }
     }
     onDateChange = (createdAt) => {
-        console.log('Date change is being called');
+        
         if (createdAt) {
             this.setState(() => ({ createdAt }));
         }
@@ -58,10 +58,11 @@ export default class ExpenseForm extends React.Component {
             this.setState(() => ({ error: 'Please enter Description and AMount' }));
         } else {
             this.setState(() => ({ error: '' }));
+           
             this.props.onSubmit({
                 description: this.state.description,
                 amount: parseFloat(this.state.amount, 10) * 100,
-                notes: this.state.note,
+                notes: this.state.notes,
                 createdAt: this.state.createdAt.valueOf()
             })
         }
@@ -95,7 +96,7 @@ export default class ExpenseForm extends React.Component {
                     />
                     <textarea
                         placeholder='Add a note for your expense (optional)'
-                        value={this.state.note}
+                        value={this.state.notes}
                         onChange={this.noteOnChange}
                     />
                     <button>Save Expense</button>

@@ -34,7 +34,7 @@ test("Should set note on textarea change", () => {
     const value = "Hello world"
     const wrapper = shallow(<ExpenseForm />);
     wrapper.find("textarea").simulate('change', {target : {value}});
-    expect(wrapper.state('note')).toBe(value);
+    expect(wrapper.state('notes')).toBe(value);
 });
 
 test("Should set amount if valid input", () => {
@@ -61,7 +61,7 @@ test("Should call onsubmit prop with valid form submission", () => {
         amount: expenses[1].amount,
         createdAt: expenses[1].createdAt,
         description: expenses[1].description,
-        notes : undefined
+        notes : ""
     })
 });
 

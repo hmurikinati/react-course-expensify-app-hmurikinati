@@ -9,11 +9,9 @@ const port = process.env.PORT || '8080';
 app.set('port', port);
 
 app.get('/*', function (req, res) {
-  console.log("I am inside router");
   res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 
 const server = http.createServer(app);
 app.listen(port, () => {
-  console.log('Server is up');
 });
