@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should capture loginpage snapshot 1`] = `
+<div>
+  <button
+    className="btn btn-primary"
+  >
+    Login
+  </button>
+</div>
+`;

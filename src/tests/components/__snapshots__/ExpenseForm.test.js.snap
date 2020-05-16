@@ -2,6 +2,7 @@
 
 exports[`Should render Expense form correctly 1`] = `
 <div>
+  <Header />
   <form
     onSubmit={[Function]}
   >
@@ -127,6 +128,7 @@ exports[`Should render Expense form correctly 1`] = `
 
 exports[`Should render Expense form correctly with expense data 1`] = `
 <div>
+  <Header />
   <form
     onSubmit={[Function]}
   >
@@ -252,6 +254,7 @@ exports[`Should render Expense form correctly with expense data 1`] = `
 
 exports[`Should render error for invalid form submission 1`] = `
 <div>
+  <Header />
   <form
     onSubmit={[Function]}
   >
@@ -377,6 +380,7 @@ exports[`Should render error for invalid form submission 1`] = `
 
 exports[`Should render error for invalid form submission 2`] = `
 <div>
+  <Header />
   <p>
      
     Please enter Description and AMount
@@ -507,6 +511,7 @@ exports[`Should render error for invalid form submission 2`] = `
 
 exports[`Should set new date on date change 1`] = `
 <div>
+  <Header />
   <form
     onSubmit={[Function]}
   >

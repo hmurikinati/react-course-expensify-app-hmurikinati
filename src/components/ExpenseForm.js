@@ -2,6 +2,8 @@ import React from 'react';
 import moment from 'moment';
 import 'react-dates/initialize';
 import { SingleDatePicker } from 'react-dates';
+import { Header } from './Header';
+
 
 import 'react-dates/lib/css/_datepicker.css';
 const now = moment();
@@ -70,6 +72,7 @@ export default class ExpenseForm extends React.Component {
     render() {
         return (
             <div>
+            {/* <Header /> */}
                 {this.state.error && <p> {this.state.error} </p>}
                 <form onSubmit={this.onSubmit}>
                     <input

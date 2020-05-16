@@ -200,6 +200,7 @@ yarn add react-test-renderer
 yarn add enzyme enzyme-adapter-react-16 raf
 Docs for enzyme : https://airbnb.io/enzyme/
 yarn add enzyme-to-json
+To manage session history : npm i history
 
 
 _________________________________________
