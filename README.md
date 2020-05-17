@@ -201,6 +201,22 @@ yarn add enzyme enzyme-adapter-react-16 raf
 Docs for enzyme : https://airbnb.io/enzyme/
 yarn add enzyme-to-json
 To manage session history : npm i history
+good article about view ports : https://www.sitepoint.com/css-viewport-units-quick-start/
+best article for response font size calculation 1. https://zellwk.com/blog/viewport-based-typography/ 2. https://codepen.io/indrekpaas/pen/VarLaJ?editors=1100
+
+html {
+  font-size: 100%;
+
+  // Scales by 1px for every 100px from 600px to 1000px
+  @media (min-width: 600px) {
+    font-size: calc(112.5% + 4 * (100vw - 600px) / 400)
+  }
+
+  // Scales by 0.5px for every 100px from 1000px to 2000px
+  @media (min-width: 1000px) {
+    font-size: calc(137.5% + 5 * (100vw - 1000px) / 1000)
+  }
+}
 
 
 _________________________________________

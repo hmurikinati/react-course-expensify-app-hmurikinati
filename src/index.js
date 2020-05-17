@@ -13,6 +13,7 @@ import 'normalize.css/normalize.css';
 import './styles/styles.scss';
 import '../src/firebase/firebase';
 import { firebase } from '../src/firebase/firebase'
+import LoadingPage from './components/LoadingPage';
 
 const store = configureStore();
 
@@ -31,11 +32,9 @@ const renderApp = () => {
 }
 
 ReactDOM.render(
-  <p> Loading.....</p>,
+  <LoadingPage />,
   document.getElementById('app')
 );
-
-
 
 
 firebase.auth().onAuthStateChanged(function (user) {

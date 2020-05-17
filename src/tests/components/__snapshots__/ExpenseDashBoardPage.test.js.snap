@@ -2,7 +2,6 @@
 
 exports[`Should render Expense dashboard page correctly 1`] = `
 <div>
-  <Connect(Header) />
   <Connect(ExpensesSummary)
     ti={1}
   />
