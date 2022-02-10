@@ -23,7 +23,7 @@
     "husky": "^4.2.5",
     "lint-staged": "^10.1.5",
     "moment": "^2.24.0",
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.0",
     "normalize.css": "^8.0.1",
     "numeral": "^2.0.6",
     "prettier": "^2.0.4",
